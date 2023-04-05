@@ -8,5 +8,10 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Utkarsh91362/javacicode.git'
             }
         }
+        stage('UNIT TESTING'){
+            steps{
+                sh 'mvn test'
+            }
+        }
     }
 }
